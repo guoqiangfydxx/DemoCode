@@ -41,6 +41,7 @@ class NewMail extends Component {
     );
   }
 
+  // 获取光标的位置
   HandleSelectionChange = () => {
     var sel = window.getSelection && window.getSelection();
     if (sel && sel.rangeCount > 0) {

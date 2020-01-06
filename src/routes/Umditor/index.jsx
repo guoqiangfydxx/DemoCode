@@ -11,7 +11,7 @@ export default class Umditor extends Component {
 
   handleChange(content) {
     const { updateContent } = this.props;
-    updateContent(content);
+    updateContent && updateContent(content);
   }
 
   getIcons() {

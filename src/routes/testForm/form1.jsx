@@ -13,8 +13,6 @@ class Form1 extends React.Component {
   handleInputChange = e => {
     const { value } = e.target;
     const { form2 } = this.props;
-    console.log("values>>>>>>>>>", value);
-    console.log("form2>>>>>>", form2);
     form2.current.setFieldsValue({
       input3: value
     });
@@ -35,7 +33,6 @@ class Form1 extends React.Component {
     //     }
     //   }
     // );
-    console.log("in>>>>>");
     const key = 13;
     this.props.form.setFieldsValue({
       [key]: true
