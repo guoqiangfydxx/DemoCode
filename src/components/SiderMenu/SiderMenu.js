@@ -225,6 +225,19 @@ export default class SiderMenu extends PureComponent {
               <Link to="/routerJump">路由跳转</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub14"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>Tree组件</span>
+              </span>
+            }
+          >
+            <Menu.Item key="14">
+              <Link to="/tree">Tree组件</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );

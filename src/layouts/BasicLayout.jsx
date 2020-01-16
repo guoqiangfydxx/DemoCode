@@ -22,6 +22,7 @@ import DownLoad from "../routes/download";
 import Umditor from "../routes/Umditor/testEmditor";
 import WordBreakTest from "../routes/wordBreak/index";
 import RouterJump from "../routes/RouterJump";
+import Tree from "../routes/Tree";
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -134,6 +135,7 @@ class BasicLayout extends React.Component {
               <Route path="/hook" exacrt component={Counter} />
               <Route path="/wordbreak" exacrt component={WordBreakTest} />
               <Route path="/routerJump" exacrt component={RouterJump} />
+              <Route path="/tree" exacrt component={Tree} />
               <Redirect to="/" />
             </Switch>
           </Content>
