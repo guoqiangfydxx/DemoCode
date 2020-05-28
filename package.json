@@ -5,7 +5,9 @@
   "dependencies": {
     "ajv": "^5.0.0",
     "antd": "^3.10.0",
+    "antd-mobile": "^2.3.1",
     "axios": "^0.18.0",
+    "bizcharts": "^3.5.6",
     "classnames": "^2.2.5",
     "draft-js": "^0.11.1",
     "draftjs-to-html": "^0.8.4",
@@ -29,8 +31,7 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-umeditor": "^1.0.15",
-    "wangeditor": "^3.1.1",
-    "bizcharts": "^3.5.6"
+    "wangeditor": "^3.1.1"
   },
   "scripts": {
     "start": "react-app-rewired start",
