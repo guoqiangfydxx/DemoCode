@@ -24,37 +24,38 @@ import Umditor from "../routes/Umditor/testEmditor";
 import WordBreakTest from "../routes/wordBreak/index";
 import RouterJump from "../routes/RouterJump";
 import Tree from "../routes/Tree";
+import FormTest from "../routes/FormTest";
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
 
 const query = {
   "screen-xs": {
-    maxWidth: 575
+    maxWidth: 575,
   },
   "screen-sm": {
     minWidth: 576,
-    maxWidth: 767
+    maxWidth: 767,
   },
   "screen-md": {
     minWidth: 768,
-    maxWidth: 991
+    maxWidth: 991,
   },
   "screen-lg": {
     minWidth: 992,
-    maxWidth: 1199
+    maxWidth: 1199,
   },
   "screen-xl": {
     minWidth: 1200,
-    maxWidth: 1599
+    maxWidth: 1599,
   },
   "screen-xxl": {
-    minWidth: 1600
-  }
+    minWidth: 1600,
+  },
 };
 
 let isMobile;
-enquireScreen(b => {
+enquireScreen((b) => {
   isMobile = b;
 });
 
@@ -63,16 +64,16 @@ class BasicLayout extends React.Component {
     currentUser: {
       name: "测试",
       avatar:
-        "https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png"
+        "https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png",
     },
     collapsed: false,
-    isMobile
+    isMobile,
   };
 
   componentDidMount() {
-    this.enquireHandler = enquireScreen(mobile => {
+    this.enquireHandler = enquireScreen((mobile) => {
       this.setState({
-        isMobile: mobile
+        isMobile: mobile,
       });
     });
   }
@@ -85,9 +86,9 @@ class BasicLayout extends React.Component {
     return "template";
   }
 
-  handleMenuCollapse = collapsed => {
+  handleMenuCollapse = (collapsed) => {
     this.setState({
-      collapsed: collapsed
+      collapsed: collapsed,
     });
   };
 
@@ -119,7 +120,7 @@ class BasicLayout extends React.Component {
             style={{
               margin: "24px 24px 0",
               background: "#fff",
-              height: "100%"
+              height: "100%",
             }}
           >
             <Switch>
@@ -138,6 +139,7 @@ class BasicLayout extends React.Component {
               <Route path="/routerJump" exacrt component={RouterJump} />
               <Route path="/tree" exacrt component={Tree} />
               <Route path="/drawer" exacrt component={Drawer} />
+              <Route path="/formTest" exacrt component={FormTest} />
               <Redirect to="/" />
             </Switch>
           </Content>
@@ -158,7 +160,7 @@ class BasicLayout extends React.Component {
     return (
       <DocumentTitle title={this.getPageTitle()}>
         <ContainerQuery query={query}>
-          {params => <div className={classNames(params)}>{layout}</div>}
+          {(params) => <div className={classNames(params)}>{layout}</div>}
         </ContainerQuery>
       </DocumentTitle>
     );
