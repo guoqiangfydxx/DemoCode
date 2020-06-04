@@ -1,5 +1,5 @@
 import React from "react";
-import { Tabs, Form, Row, Col, Input, Button } from "antd";
+import { Tabs, Form, Row, Col, Input, Button, message } from "antd";
 import Form1 from "./form1";
 import Form2 from "./form2";
 import Form3 from "./form3";
@@ -19,19 +19,11 @@ class TestForm extends React.Component {
     this.state = {
       activeKey: "1",
     };
-
-    // this.form1 = React.createRef();
-    // this.form2 = React.createRef();
-    // this.form3 = React.createRef();
-    // this.form4 = React.createRef();
-    formRefArr.forEach((item) => {
-      this[item] = React.createRef();
-    });
   }
 
   customValidateForm2 = () => {
     return new Promise((resolve, reject) => {
-      this.form2.current.validateFieldsAndScroll((err, values) => {
+      this.form2.validateFieldsAndScroll((err, values) => {
         if (err) {
           reject({
             activeKey: "2",
@@ -67,7 +59,7 @@ class TestForm extends React.Component {
     console.log("form1", this.form1);
     const formValidateArr = formRefArr.map((item) => {
       return new Promise((resolve, reject) => {
-        this[item].current.validateFieldsAndScroll(
+        this[item].props.form.validateFieldsAndScroll(
           { scorll: { alignWithTop: true, offsetTop: 50 }, first: true },
           (err, values) => {
             if (err) {
@@ -88,6 +80,7 @@ class TestForm extends React.Component {
       .then(
         (allFormData) => {
           console.log("allFormData", allFormData);
+          this.handleData(allFormData);
         },
         (err) => {
           console.error("error", err);
@@ -97,7 +90,15 @@ class TestForm extends React.Component {
       )
       .catch((err) => {
         console.error("catch>>>>", err);
+        if (err instanceof Error) {
+          message.error(err.message);
+        }
       });
+  };
+
+  handleData = (formData) => {
+    console.log("处理表单数据");
+    throw Error("fsfsfs");
   };
 
   handleTabChange = (activeKey) => {
@@ -134,16 +135,33 @@ class TestForm extends React.Component {
           onChange={this.handleTabChange}
         >
           <TabPane tab="form1" key={"1"}>
-            <Form1 ref={this.form1} form2={this.form2} />
+            <Form1
+              wrappedComponentRef={(form) => {
+                this.form1 = form;
+              }}
+              form2={this.form2}
+            />
           </TabPane>
           <TabPane tab="form2" key={"2"} forceRender={true}>
-            <Form2 ref={this.form2} />
+            <Form2
+              wrappedComponentRef={(form) => {
+                this.form2 = form;
+              }}
+            />
           </TabPane>
           <TabPane tab="form3" key={"3"} forceRender={true}>
-            <Form3 ref={this.form3} />
+            <Form3
+              wrappedComponentRef={(form) => {
+                this.form3 = form;
+              }}
+            />
           </TabPane>
           <TabPane tab="form4" key={"4"} forceRender={true}>
-            <Form4 ref={this.form4} />
+            <Form4
+              wrappedComponentRef={(form) => {
+                this.form4 = form;
+              }}
+            />
           </TabPane>
         </Tabs>
         <Button type="primary" onClick={this.submit}>

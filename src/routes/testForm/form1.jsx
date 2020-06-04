@@ -5,7 +5,9 @@ const { Option, OptGroup } = Select;
 class Form1 extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      fileList: []
+    };
   }
 
   componentDidMount() {}
