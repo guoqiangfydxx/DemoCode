@@ -1,11 +1,13 @@
 import React, { Fragment } from "react";
-import { Form, Col, Row, Button, Radio, Select } from "antd";
+import { Form, Col, Row, Button, Select, Input } from "antd";
 
 const { Option, OptGroup } = Select;
 class Form1 extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      fileList: []
+    };
   }
 
   componentDidMount() {}
@@ -47,7 +49,7 @@ class Form1 extends React.Component {
           <Row>
             <Col>
               <Form.Item label={"测试"}>
-                {getFieldDecorator(13 + "", {
+                {getFieldDecorator('test', {
                   // initialValue: 13,
                   rules: [
                     {
@@ -55,8 +57,7 @@ class Form1 extends React.Component {
                       message: `测试不能为空`
                     }
                   ],
-                  valuePropName: "checked"
-                })(<Radio key={13}>{"车水电费水电费"}</Radio>)}
+                })(<Input />)}
               </Form.Item>
             </Col>
             <Col>

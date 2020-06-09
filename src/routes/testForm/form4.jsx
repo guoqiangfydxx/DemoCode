@@ -19,7 +19,24 @@ class MainForm extends React.Component {
         <Row>
           <Col>
             <Form.Item label='输入框5'>
-              {getFieldDecorator('input5')(
+              {getFieldDecorator('input5', {
+                rules: [{
+                  required: true,
+                  message: '输入框不能为空'
+                }]
+              })(
+                <Input />
+              )}
+            </Form.Item>
+          </Col>
+          <Col>
+            <Form.Item label='输入框5'>
+              {getFieldDecorator('input5', {
+                rules: [{
+                  required: true,
+                  message: '输入框不能为空'
+                }]
+              })(
                 <Input />
               )}
             </Form.Item>
