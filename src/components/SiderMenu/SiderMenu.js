@@ -238,6 +238,19 @@ export default class SiderMenu extends PureComponent {
               <Link to="/tree">Tree组件</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub15"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>初步添加tsx</span>
+              </span>
+            }
+          >
+            <Menu.Item key="15">
+              <Link to="/testtsx">Tsx</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );

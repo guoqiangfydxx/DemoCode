@@ -23,6 +23,7 @@ import Umditor from "../routes/Umditor/testEmditor";
 import WordBreakTest from "../routes/wordBreak/index";
 import RouterJump from "../routes/RouterJump";
 import Tree from "../routes/Tree";
+import TestTsx from '../routes/testtsx/index.tsx'
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -131,11 +132,12 @@ class BasicLayout extends React.Component {
               <Route path="/viewport" exact component={Viewport} />
               <Route path="/chart" exact component={Chart} />
               <Route path="/testform" exact component={TestForm} />
-              <Route path="/umeditor" exacrt component={Umditor} />
-              <Route path="/hook" exacrt component={Counter} />
-              <Route path="/wordbreak" exacrt component={WordBreakTest} />
-              <Route path="/routerJump" exacrt component={RouterJump} />
-              <Route path="/tree" exacrt component={Tree} />
+              <Route path="/umeditor" exact component={Umditor} />
+              <Route path="/hook" exact component={Counter} />
+              <Route path="/wordbreak" exact component={WordBreakTest} />
+              <Route path="/routerJump" exact component={RouterJump} />
+              <Route path="/tree" exact component={Tree} />
+              <Route path="/testtsx" exact component={TestTsx} />
               <Redirect to="/" />
             </Switch>
           </Content>
