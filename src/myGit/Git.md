@@ -22,8 +22,14 @@
   11. 比较暂存区和HEAD文件的差异：git diff --cached
       比较工作区和暂存区文件的差异：git diff
       比较工作区和HEAD之间的差异：git diff HEAD
-  12. 取消暂存区的内容保持和HEAD一致：git reset HEAD,如果加了--hard，那么工作区和暂存区都恢复成HEAD，不加--hard那么仅仅是暂存区恢复成了HEAD，工作区不变
-     将工作区的内容恢复和暂存区一致：git checkout -- file
+  12. 取消暂存区的内容保持和HEAD一致：git reset HEAD,如果加了--hard，那么工作区和暂存区都恢复成HEAD，不加--hard那么仅仅是暂存区恢复成了HEAD，工作区不变  
+     将工作区的内容恢复和暂存区一致：git checkout -- file  
+     回退到某一个提交节点：git reset --hard pre_commit_id,这样的话工作区和暂存区就都回退到了pre_commit_id提交的内容
+  13. 比较两次提交之间的不同，两个分支的不同: git diff commit1_id commit2_id file_name?   
+      git diff branch_name_1 branch_name_2 file_name?
+  14. git删除文件：git rm file_name,这样的话Git就会直接把这个删除的文件放到暂存区
+  15. git储藏, git stash save message; git stash pop id; git stash appply id;
+    git stash drop id;
 ## git, tre, blob的关系
   1. git每一次的commit都会对应一颗tree,这棵树就是本次提交是项目中所有文件的快照，tree下面会嵌套tree和blob，tree对应的就是一个个文件夹，而blob对应就是文件。但是git对于文件做了优化处理，在多次提交中不管文件名叫什么，主要是文件内容相同的都都存储为同一个blob文件，这样就大大节省了内容。
   2. git运行原理：当我们对项目文件进行更新之后，提交的时候git会扫描当前项目结构创建一个tree并按照文件夹和文件的不通过类型将tree和blob放入到这颗树中，之后再封装到一个commit中完成本次的提交。在将来如果我们希望回退到某一个版本的话，那么我们可以根据某一次提交的id，git会根据这个唯一的id找到这个tree，然后根据这个tree组件对仓库进行还原，整个过程都是以hash和二进制的方式进行的，所以Git的效率非常高。
