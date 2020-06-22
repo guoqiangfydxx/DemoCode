@@ -30,6 +30,11 @@
   14. git删除文件：git rm file_name,这样的话Git就会直接把这个删除的文件放到暂存区
   15. git储藏, git stash save message; git stash pop id; git stash appply id;
     git stash drop id;
+  16. 变基,git rebase target_branch
 ## git, tre, blob的关系
   1. git每一次的commit都会对应一颗tree,这棵树就是本次提交是项目中所有文件的快照，tree下面会嵌套tree和blob，tree对应的就是一个个文件夹，而blob对应就是文件。但是git对于文件做了优化处理，在多次提交中不管文件名叫什么，主要是文件内容相同的都都存储为同一个blob文件，这样就大大节省了内容。
   2. git运行原理：当我们对项目文件进行更新之后，提交的时候git会扫描当前项目结构创建一个tree并按照文件夹和文件的不通过类型将tree和blob放入到这颗树中，之后再封装到一个commit中完成本次的提交。在将来如果我们希望回退到某一个版本的话，那么我们可以根据某一次提交的id，git会根据这个唯一的id找到这个tree，然后根据这个tree组件对仓库进行还原，整个过程都是以hash和二进制的方式进行的，所以Git的效率非常高。
+## 分支集成策略
+  merge commit-----合并commit信息
+  squash commit----将多个commit合并为一个commit，
+  rebase commit----将功能分支上的多个commit转移到HEAD分支上，可以将主分支的提交变成一个线性，便于管理
