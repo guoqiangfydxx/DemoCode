@@ -24,6 +24,7 @@ import Umditor from "../routes/Umditor/testEmditor";
 import WordBreakTest from "../routes/wordBreak/index";
 import RouterJump from "../routes/RouterJump";
 import Tree from "../routes/Tree";
+import TestTsx from '../routes/testtsx/index.tsx'
 import FormTest from "../routes/FormTest";
 import TestThis from '../routes/testThis';
 import "./BasicLayout.less";

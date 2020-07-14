@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.2",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
     "ajv": "^5.0.0",
     "antd": "^3.10.0",
     "antd-mobile": "^2.3.1",
@@ -31,6 +35,7 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-umeditor": "^1.0.15",
+    "typescript": "^3.8.3",
     "wangeditor": "^3.1.1"
   },
   "scripts": {
