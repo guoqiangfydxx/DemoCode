@@ -26,6 +26,7 @@ import RouterJump from "../routes/RouterJump";
 import Tree from "../routes/Tree";
 import TestTsx from '../routes/testtsx/index.tsx'
 import FormTest from "../routes/FormTest";
+import TestThis from '../routes/testThis';
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -141,6 +142,7 @@ class BasicLayout extends React.Component {
               <Route path="/tree" exacrt component={Tree} />
               <Route path="/drawer" exacrt component={Drawer} />
               <Route path="/formTest" exacrt component={FormTest} />
+              <Route path="/testThis" exacrt component={TestThis} />
               <Redirect to="/" />
             </Switch>
           </Content>
