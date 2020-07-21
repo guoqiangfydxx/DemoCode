@@ -27,7 +27,6 @@ import Tree from "../routes/Tree";
 import TestTsx from "../routes/testtsx/index.tsx";
 import FormTest from "../routes/FormTest";
 import TestThis from "../routes/testThis";
-import { test } from "../utils";
 import TestMediaSession from "../routes/mediaSession";
 import "./BasicLayout.less";
 
