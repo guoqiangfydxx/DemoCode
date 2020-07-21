@@ -7,9 +7,13 @@ class Test extends Component {
         }
     }
 
+    
+
     render() {
         return (
-            <div>测试</div>
+            <div>测试
+                
+            </div>
         )
     }
 }

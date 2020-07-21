@@ -24,9 +24,11 @@ import Umditor from "../routes/Umditor/testEmditor";
 import WordBreakTest from "../routes/wordBreak/index";
 import RouterJump from "../routes/RouterJump";
 import Tree from "../routes/Tree";
-import TestTsx from '../routes/testtsx/index.tsx'
+import TestTsx from "../routes/testtsx/index.tsx";
 import FormTest from "../routes/FormTest";
-import TestThis from '../routes/testThis';
+import TestThis from "../routes/testThis";
+import { test } from "../utils";
+import TestMediaSession from "../routes/mediaSession";
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -143,6 +145,7 @@ class BasicLayout extends React.Component {
               <Route path="/drawer" exacrt component={Drawer} />
               <Route path="/formTest" exacrt component={FormTest} />
               <Route path="/testThis" exacrt component={TestThis} />
+              <Route path="/mediaSession" exacrt component={TestMediaSession} />
               <Redirect to="/" />
             </Switch>
           </Content>
