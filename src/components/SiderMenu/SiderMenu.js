@@ -14,22 +14,22 @@ export default class SiderMenu extends PureComponent {
 
     this.state = {
       openKeys: ["sub1"],
-      selectedKeys: ["1"]
+      selectedKeys: ["1"],
     };
   }
 
   // submenu keys of first level
   rootSubmenuKeys = ["sub1", "sub2", "sub3"];
 
-  onOpenChange = openKeys => {
+  onOpenChange = (openKeys) => {
     const latestOpenKey = openKeys.find(
-      key => this.state.openKeys.indexOf(key) === -1
+      (key) => this.state.openKeys.indexOf(key) === -1
     );
     if (this.rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
       this.setState({ openKeys });
     } else {
       this.setState({
-        openKeys: latestOpenKey ? [latestOpenKey] : []
+        openKeys: latestOpenKey ? [latestOpenKey] : [],
       });
     }
   };
@@ -39,7 +39,6 @@ export default class SiderMenu extends PureComponent {
     const { openKeys } = this.state;
 
     const menuProps = collapsed ? {} : { openKeys };
-
 
     return (
       <Sider
@@ -288,6 +287,19 @@ export default class SiderMenu extends PureComponent {
           >
             <Menu.Item key="18">
               <Link to="/mediaSession">测试mediaSession</Link>
+            </Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key="sub19"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>测试路由</span>
+              </span>
+            }
+          >
+            <Menu.Item key="19">
+              <Link to="/testRoute">测试路由</Link>
             </Menu.Item>
           </SubMenu>
         </Menu>

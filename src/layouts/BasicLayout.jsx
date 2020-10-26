@@ -28,6 +28,7 @@ import TestTsx from "../routes/testtsx/index.tsx";
 import FormTest from "../routes/FormTest";
 import TestThis from "../routes/testThis";
 import TestMediaSession from "../routes/mediaSession";
+import TestRouter from '../routes/testRoute'
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -145,6 +146,7 @@ class BasicLayout extends React.Component {
               <Route path="/formTest" exacrt component={FormTest} />
               <Route path="/testThis" exacrt component={TestThis} />
               <Route path="/mediaSession" exacrt component={TestMediaSession} />
+              <Route path="/testRoute" exacrt component={TestRouter} />
               <Redirect to="/" />
             </Switch>
           </Content>
