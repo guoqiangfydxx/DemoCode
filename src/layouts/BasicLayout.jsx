@@ -29,6 +29,7 @@ import FormTest from "../routes/FormTest";
 import TestThis from "../routes/testThis";
 import TestMediaSession from "../routes/mediaSession";
 import TestRouter from '../routes/testRoute'
+import TestForceUpdate from '../routes/forceUpdate'
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -147,6 +148,7 @@ class BasicLayout extends React.Component {
               <Route path="/testThis" exacrt component={TestThis} />
               <Route path="/mediaSession" exacrt component={TestMediaSession} />
               <Route path="/testRoute" exacrt component={TestRouter} />
+              <Route path="/testForceUpdate" exacrt component={TestForceUpdate} />
               <Redirect to="/" />
             </Switch>
           </Content>
