@@ -30,6 +30,7 @@ import TestThis from "../routes/testThis";
 import TestMediaSession from "../routes/mediaSession";
 import TestRouter from '../routes/testRoute'
 import TestForceUpdate from '../routes/forceUpdate'
+import TestTable from '../routes/Table'
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -149,6 +150,7 @@ class BasicLayout extends React.Component {
               <Route path="/mediaSession" exacrt component={TestMediaSession} />
               <Route path="/testRoute" exacrt component={TestRouter} />
               <Route path="/testForceUpdate" exacrt component={TestForceUpdate} />
+              <Route path="/testTable" exacrt component={TestTable} />
               <Redirect to="/" />
             </Switch>
           </Content>
