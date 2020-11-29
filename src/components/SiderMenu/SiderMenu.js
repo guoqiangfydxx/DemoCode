@@ -328,6 +328,19 @@ export default class SiderMenu extends PureComponent {
               <Link to="/testTable">测试原生表格</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub22"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>转发ref</span>
+              </span>
+            }
+          >
+            <Menu.Item key="22">
+              <Link to="/testForwardref">测试转发ref</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );

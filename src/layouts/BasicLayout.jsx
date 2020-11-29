@@ -31,6 +31,7 @@ import TestMediaSession from "../routes/mediaSession";
 import TestRouter from '../routes/testRoute'
 import TestForceUpdate from '../routes/forceUpdate'
 import TestTable from '../routes/Table'
+import TestForwardRef from '../routes/forwardRef'
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -151,6 +152,7 @@ class BasicLayout extends React.Component {
               <Route path="/testRoute" exacrt component={TestRouter} />
               <Route path="/testForceUpdate" exacrt component={TestForceUpdate} />
               <Route path="/testTable" exacrt component={TestTable} />
+              <Route path="/testForwardref" exacrt component={TestForwardRef} />
               <Redirect to="/" />
             </Switch>
           </Content>
