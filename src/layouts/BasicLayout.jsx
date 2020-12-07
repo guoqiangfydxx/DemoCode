@@ -32,6 +32,7 @@ import TestRouter from '../routes/testRoute'
 import TestForceUpdate from '../routes/forceUpdate'
 import TestTable from '../routes/Table'
 import TestForwardRef from '../routes/forwardRef'
+import TestNotification from '../routes/Notification'
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -153,6 +154,7 @@ class BasicLayout extends React.Component {
               <Route path="/testForceUpdate" exacrt component={TestForceUpdate} />
               <Route path="/testTable" exacrt component={TestTable} />
               <Route path="/testForwardref" exacrt component={TestForwardRef} />
+              <Route path="/testNotification" exacrt component={TestNotification} />
               <Redirect to="/" />
             </Switch>
           </Content>
