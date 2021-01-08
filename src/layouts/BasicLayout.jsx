@@ -34,6 +34,7 @@ import TestTable from '../routes/Table'
 import TestForwardRef from '../routes/forwardRef'
 import TestNotification from '../routes/Notification'
 import ContextMenu from '../routes/ContextMenu'
+import TestTimer from '../routes/timer'
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -157,6 +158,7 @@ class BasicLayout extends React.Component {
               <Route path="/testForwardref" exacrt component={TestForwardRef} />
               <Route path="/testNotification" exacrt component={TestNotification} />
               <Route path="/testContextMenu" exacrt component={ContextMenu} />
+              <Route path="/testTimer" exacrt component={TestTimer} />
               <Redirect to="/" />
             </Switch>
           </Content>
