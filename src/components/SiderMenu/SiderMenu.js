@@ -380,6 +380,19 @@ export default class SiderMenu extends PureComponent {
               <Link to="/testTimer">测试timer</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub26"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>测试export</span>
+              </span>
+            }
+          >
+            <Menu.Item key="26">
+              <Link to="/testExport">测试EXport</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );
