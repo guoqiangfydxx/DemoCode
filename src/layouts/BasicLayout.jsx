@@ -14,7 +14,6 @@ import Chart from "../routes/Chart";
 import Viewport from "../routes/Viewport";
 import Counter from "../routes/hooks";
 import Home from "../routes/Home";
-import Drawer from "../routes/Drawer";
 import ChannelLog from "../routes/ChannelLog";
 import Job from "../routes/Job";
 
@@ -149,7 +148,6 @@ class BasicLayout extends React.Component {
               <Route path="/wordbreak" exacrt component={WordBreakTest} />
               <Route path="/routerJump" exacrt component={RouterJump} />
               <Route path="/tree" exacrt component={Tree} />
-              <Route path="/drawer" exacrt component={Drawer} />
               <Route path="/formTest" exacrt component={FormTest} />
               <Route path="/testThis" exacrt component={TestThis} />
               <Route path="/mediaSession" exacrt component={TestMediaSession} />
