@@ -36,6 +36,7 @@ import ContextMenu from '../routes/ContextMenu'
 import TestTimer from '../routes/timer'
 import TestExport from '../routes/Testexport'
 import CodeMirror from '../routes/codeMirror'
+import TreeSelect from '../routes/treeSelect'
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -161,6 +162,7 @@ class BasicLayout extends React.Component {
               <Route path="/testTimer" exacrt component={TestTimer} />
               <Route path="/testExport" exacrt component={TestExport} />
               <Route path="/code" exacrt component={CodeMirror} />
+              <Route path="/treeSelect" exacrt component={TreeSelect} />
               <Redirect to="/" />
             </Switch>
           </Content>
