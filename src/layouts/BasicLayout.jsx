@@ -37,6 +37,8 @@ import TestTimer from '../routes/timer'
 import TestExport from '../routes/Testexport'
 import CodeMirror from '../routes/codeMirror'
 import TreeSelect from '../routes/treeSelect'
+import TinyMce from '../routes/tinyMce'
+import TestDown from '../routes/downLoad1'
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -163,6 +165,8 @@ class BasicLayout extends React.Component {
               <Route path="/testExport" exacrt component={TestExport} />
               <Route path="/code" exacrt component={CodeMirror} />
               <Route path="/treeSelect" exacrt component={TreeSelect} />
+              <Route path="/tinymce" exacrt component={TinyMce} />
+              <Route path="/testDown" exacrt component={TestDown} />
               <Redirect to="/" />
             </Switch>
           </Content>
