@@ -39,6 +39,7 @@ import CodeMirror from '../routes/codeMirror'
 import TreeSelect from '../routes/treeSelect'
 import TinyMce from '../routes/tinyMce'
 import TestDown from '../routes/downLoad1'
+import TestInitial from '../routes/initial'
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -167,6 +168,7 @@ class BasicLayout extends React.Component {
               <Route path="/treeSelect" exacrt component={TreeSelect} />
               <Route path="/tinymce" exacrt component={TinyMce} />
               <Route path="/testDown" exacrt component={TestDown} />
+              <Route path="/initial" exacrt component={TestInitial} />
               <Redirect to="/" />
             </Switch>
           </Content>
