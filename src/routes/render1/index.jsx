@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "antd";
 import FunctionParent from "./parent";
+import StateComponent from './state2'
 
 class Child extends React.PureComponent {
   state = {};
@@ -81,6 +82,8 @@ class Parent extends React.Component {
           函数组件-------------------------------------------------------------------------------------
         </div>
         <FunctionParent />
+        <p>状态下放------------------------------------------------------缩小影响范围</p>
+        <StateComponent />
       </div>
     );
   }
