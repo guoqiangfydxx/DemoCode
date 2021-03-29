@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "antd";
 import FunctionParent from "./parent";
 import StateComponent from './state2'
+import UseMemoComponent from './useMemo'
 
 class Child extends React.PureComponent {
   state = {};
@@ -84,6 +85,8 @@ class Parent extends React.Component {
         <FunctionParent />
         <p>状态下放------------------------------------------------------缩小影响范围</p>
         <StateComponent />
+        <div>使用useMemo来返回虚拟dom----------------------------------------------</div>
+        <UseMemoComponent />
       </div>
     );
   }
