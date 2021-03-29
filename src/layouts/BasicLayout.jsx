@@ -41,6 +41,7 @@ import TinyMce from '../routes/tinyMce'
 import TestDown from '../routes/downLoad1'
 import TestInitial from '../routes/initial'
 import Parent from '../routes/render1'
+import TestState from '../routes/state'
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -171,6 +172,7 @@ class BasicLayout extends React.Component {
               <Route path="/testDown" exacrt component={TestDown} />
               <Route path="/initial" exacrt component={TestInitial} />
               <Route path="/parent" exacrt component={Parent} />
+              <Route path="/testState" exacrt component={TestState} />
               <Redirect to="/" />
             </Switch>
           </Content>
