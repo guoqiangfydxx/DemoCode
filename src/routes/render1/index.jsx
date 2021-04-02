@@ -4,6 +4,7 @@ import FunctionParent from "./parent";
 import StateComponent from "./state2";
 import UseMemoComponent from "./useMemo";
 import HookComponent from "./hooks";
+import List from './list'
 
 class Child extends React.PureComponent {
   state = {};
@@ -96,6 +97,10 @@ class Parent extends React.Component {
           hooks按需更新-------------------------------------------------------------
         </div>
         <HookComponent />
+        <div>
+          <p>虚拟列表------------------------------------------------------------------------------</p>
+        </div>
+        <List />
       </div>
     );
   }
