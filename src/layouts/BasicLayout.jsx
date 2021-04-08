@@ -44,6 +44,8 @@ import Parent from '../routes/render1'
 import TestState from '../routes/state'
 import TestContext from '../routes/context'
 import TestPosition from '../routes/css/position'
+import RangePicker from '../routes/rangePicker'
+import CenterHorizontaly from '../routes/css/centerHorizontaly'
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -177,6 +179,8 @@ class BasicLayout extends React.Component {
               <Route path="/testState" exacrt component={TestState} />
               <Route path="/testContext" exacrt component={TestContext} />
               <Route path="/testPosition" exacrt component={TestPosition} />
+              <Route path="/rangePicker" exacrt component={RangePicker} />
+              <Route path="/center" exacrt component={CenterHorizontaly} />
               <Redirect to="/" />
             </Switch>
           </Content>
