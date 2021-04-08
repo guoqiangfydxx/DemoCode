@@ -523,6 +523,19 @@ export default class SiderMenu extends PureComponent {
               <Link to="/center">水平垂直居中</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub38"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>图片懒加载</span>
+              </span>
+            }
+          >
+            <Menu.Item key="38">
+              <Link to="/imgs">图片懒加载</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );

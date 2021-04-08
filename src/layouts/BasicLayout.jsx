@@ -47,7 +47,9 @@ import TestContext from '../routes/context'
 import TestPosition from '../routes/css/position'
 import RangePicker from '../routes/rangePicker'
 import CenterHorizontaly from '../routes/css/centerHorizontaly'
+import LazyLoadImgs from "../routes/lazyLoadImgs";
 import "./BasicLayout.less";
+
 
 const { Header, Content, Footer } = Layout;
 
@@ -183,6 +185,7 @@ class BasicLayout extends React.Component {
               <Route path="/testPosition" exacrt component={TestPosition} />
               <Route path="/rangePicker" exacrt component={RangePicker} />
               <Route path="/center" exacrt component={CenterHorizontaly} />
+              <Route path="/imgs" exacrt component={LazyLoadImgs} />
               <Redirect to="/" />
             </Switch>
           </Content>
