@@ -484,6 +484,45 @@ export default class SiderMenu extends PureComponent {
               <Link to="/testFloat">浮动</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub35"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>position</span>
+              </span>
+            }
+          >
+            <Menu.Item key="35">
+              <Link to="/testPosition">position</Link>
+            </Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key="sub36"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>RangePicker</span>
+              </span>
+            }
+          >
+            <Menu.Item key="36">
+              <Link to="/rangePicker">RangePicker</Link>
+            </Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key="sub37"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>水平垂直居中</span>
+              </span>
+            }
+          >
+            <Menu.Item key="37">
+              <Link to="/center">水平垂直居中</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );
