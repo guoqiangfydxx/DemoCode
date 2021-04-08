@@ -42,6 +42,7 @@ import TestDown from '../routes/downLoad1'
 import TestInitial from '../routes/initial'
 import Parent from '../routes/render1'
 import TestState from '../routes/state'
+import TestFloat from '../routes/float'
 import TestContext from '../routes/context'
 import "./BasicLayout.less";
 
@@ -175,6 +176,7 @@ class BasicLayout extends React.Component {
               <Route path="/parent" exacrt component={Parent} />
               <Route path="/testState" exacrt component={TestState} />
               <Route path="/testContext" exacrt component={TestContext} />
+              <Route path="/testFloat" exacrt component={TestFloat} />
               <Redirect to="/" />
             </Switch>
           </Content>

@@ -1,0 +1,21 @@
+.container {
+    // overflow: auto;
+    .p1 {
+        float: left;
+        width: 60%;
+    }
+    .section {
+        float: right;
+        width: 35%;
+    }
+    // .empty {
+    //     clear:both;
+    // }
+    &::after {
+        content: '';
+        height: 0;
+        visibility: hidden;
+        clear: both;
+        display: block;
+    }
+}
