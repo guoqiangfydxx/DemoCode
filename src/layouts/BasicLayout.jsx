@@ -49,6 +49,7 @@ import RangePicker from '../routes/rangePicker'
 import CenterHorizontaly from '../routes/css/centerHorizontaly'
 import LazyLoadImgs from "../routes/lazyLoadImgs";
 import TestFlex from "../routes/element";
+import TestMedia from '../routes/css/media'
 import "./BasicLayout.less";
 
 
@@ -188,6 +189,7 @@ class BasicLayout extends React.Component {
               <Route path="/center" exacrt component={CenterHorizontaly} />
               <Route path="/imgs" exacrt component={LazyLoadImgs} />
               <Route path="/flex" exacrt component={TestFlex} />
+              <Route path="/media" exacrt component={TestMedia} />
               <Redirect to="/" />
             </Switch>
           </Content>

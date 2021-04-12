@@ -545,8 +545,21 @@ export default class SiderMenu extends PureComponent {
               </span>
             }
           >
-            <Menu.Item key="38">
+            <Menu.Item key="39">
               <Link to="/flex">flex布局</Link>
+            </Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key="sub40"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>媒体查询</span>
+              </span>
+            }
+          >
+            <Menu.Item key="40">
+              <Link to="/media">媒体查询</Link>
             </Menu.Item>
           </SubMenu>
         </Menu>

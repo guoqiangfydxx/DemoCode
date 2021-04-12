@@ -103,3 +103,38 @@
     vertical-align: middle;
   }
 }
+
+.media-container {
+  border: 1px solid #B8C1C8;
+  margin: 30px;
+}
+
+// 测试媒体查询
+// @media (min-aspect-ratio: 8/5) {
+//   .media-container  {
+//     background: #9af;  /* cyan */
+//   }
+// }
+// @media (max-aspect-ratio: 3/2) {
+//   .media-container  {
+//     background: #9ff;  /* cyan */
+//   }
+// }
+
+// @media (aspect-ratio: 1/1) {
+//   .media-container {
+//     background: #f9a; /* red */
+//   }
+// }
+
+@media screen and (min-height: 620px) {
+  .media-container {
+    background: #f9a; /* red */
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  .media-container {
+    background: rgb(194, 54, 199); /* red */
+  }
+}
