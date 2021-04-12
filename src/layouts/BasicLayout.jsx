@@ -50,6 +50,7 @@ import CenterHorizontaly from '../routes/css/centerHorizontaly'
 import LazyLoadImgs from "../routes/lazyLoadImgs";
 import TestFlex from "../routes/element";
 import TestMedia from '../routes/css/media'
+import LayoutContainer from '../routes/css/layout'
 import "./BasicLayout.less";
 
 
@@ -190,6 +191,7 @@ class BasicLayout extends React.Component {
               <Route path="/imgs" exacrt component={LazyLoadImgs} />
               <Route path="/flex" exacrt component={TestFlex} />
               <Route path="/media" exacrt component={TestMedia} />
+              <Route path='/layout' exact component={LayoutContainer} />
               <Redirect to="/" />
             </Switch>
           </Content>

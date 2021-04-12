@@ -138,3 +138,88 @@
     background: rgb(194, 54, 199); /* red */
   }
 }
+
+.layout-container {
+  // 1. flex布局;
+  // display: flex;
+  // .left {
+  //   flex: 0 0 20%;
+  //   border: 1px solid rgb(236, 15, 15);
+  // }
+  // .middle {
+  //   flex: 1;
+  // }
+  // .right {
+  //   flex: 0 0 20%;
+  //   border: 1px solid rgb(81, 185, 40);
+  // }
+  // 2. 网格布局
+  // display: grid;
+  // grid-template-columns: 20% auto 20%;
+  // 3. 左右绝对定位，中间使用margin来撑开距离
+  // position: relative;
+  // .left {
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   width: 30%;
+  //   background-color: rgb(41, 168, 58);
+  //   height: 100%;
+  // }
+  // .right {
+  //   position: absolute;
+  //   right: 0;
+  //   top: 0;
+  //   width: 30%;
+  //   background-color: rgb(209, 36, 36);
+  //   height: 100%;
+  // }
+  // .middle {
+  //   margin-left: 30%;
+  //   margin-right: 30%;
+  //   height: 100%;
+  // }
+  // 4. 左右两栏浮动，中间栏使用margin隔开，但是margin必须放在最后
+  // .left {
+  //   float: left;
+  //   background-color: rgb(209, 36, 36);
+  //   width: 30%;
+  //   height: 100%;
+  // }
+  // .right {
+  //   float: right;
+  //   width: 30%;
+  //   background-color: rgb(209, 36, 36);
+  //   height: 100%;
+  // }
+  // .middle {
+  //   // clear: both;
+  //   margin: 0 30%;
+  //   height: 100%;
+  // }
+  // 5. margin负值，三栏都是设置左浮动，中间栏设置100%，然后左栏要设置margin-left:-100%移动到最左端，覆盖在中间栏上面，右栏margin-left设置自己的负宽度，正好容纳下自己，然后中间栏里面内容包裹着，同样要设置一个margin
+  // .left {
+  //   float: left;
+  //   background-color: rgb(209, 36, 36);
+  //   width: 30%;
+  //   height: 100%;
+  //   margin-left: -100%;
+  // }
+  // .right {
+  //   float: left;
+  //   width: 30%;
+  //   background-color: rgb(209, 36, 36);
+  //   height: 100%;
+  //   margin-left: -30%;
+  // }
+  // .middle {
+  //   // clear: both;
+  //   // margin: 0 30%;
+  //   // height: 100%;
+  //   float: left;
+  //   width: 100%;
+  //   .main {
+  //     margin: 0 30%;
+  //   }
+  // }
+}
