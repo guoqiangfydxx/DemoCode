@@ -562,6 +562,19 @@ export default class SiderMenu extends PureComponent {
               <Link to="/media">媒体查询</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub41"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>0.5px的线</span>
+              </span>
+            }
+          >
+            <Menu.Item key="41">
+              <Link to="/border">0.5px的线</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );
