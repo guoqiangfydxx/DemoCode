@@ -575,6 +575,19 @@ export default class SiderMenu extends PureComponent {
               <Link to="/border">0.5px的线</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub42"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>margin重叠</span>
+              </span>
+            }
+          >
+            <Menu.Item key="42">
+              <Link to="/border">margin重叠</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );
