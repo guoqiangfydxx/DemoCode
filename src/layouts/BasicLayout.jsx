@@ -51,6 +51,9 @@ import LazyLoadImgs from "../routes/lazyLoadImgs";
 import TestFlex from "../routes/element";
 import TestMedia from '../routes/css/media'
 import LayoutContainer from '../routes/css/layout'
+import TestBorder from '../routes/css/border'
+import TestMargin from '../routes/css/margin'
+import TestHeight from "../routes/css/height";
 import "./BasicLayout.less";
 
 
@@ -192,6 +195,9 @@ class BasicLayout extends React.Component {
               <Route path="/flex" exacrt component={TestFlex} />
               <Route path="/media" exacrt component={TestMedia} />
               <Route path='/layout' exact component={LayoutContainer} />
+              <Route path="/border" exacrt component={TestBorder} />
+              <Route path="/margin" exacrt component={TestMargin} />
+              <Route path="/height" exacrt component={TestHeight} />
               <Redirect to="/" />
             </Switch>
           </Content>

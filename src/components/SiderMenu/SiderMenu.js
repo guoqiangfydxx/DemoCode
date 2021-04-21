@@ -568,11 +568,39 @@ export default class SiderMenu extends PureComponent {
               <span>
                 <Icon type="setting" />
                 <span>三栏布局</span>
+                <span>0.5px的线</span>
               </span>
             }
           >
             <Menu.Item key="41">
               <Link to="/layout">三栏布局</Link>
+              <Link to="/border">0.5px的线</Link>
+            </Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key="sub42"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>margin重叠</span>
+              </span>
+            }
+          >
+            <Menu.Item key="42">
+              <Link to="/border">margin重叠</Link>
+            </Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key="sub43"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>height</span>
+              </span>
+            }
+          >
+            <Menu.Item key="43">
+              <Link to="/height">height</Link>
             </Menu.Item>
           </SubMenu>
         </Menu>
