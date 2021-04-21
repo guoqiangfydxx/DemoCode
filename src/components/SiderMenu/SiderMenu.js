@@ -616,6 +616,19 @@ export default class SiderMenu extends PureComponent {
               <Link to="/image">image</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub45"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>拷贝</span>
+              </span>
+            }
+          >
+            <Menu.Item key="45">
+              <Link to="/copy">拷贝</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );
