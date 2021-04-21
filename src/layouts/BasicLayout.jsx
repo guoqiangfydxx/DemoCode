@@ -54,6 +54,7 @@ import LayoutContainer from '../routes/css/layout'
 import TestBorder from '../routes/css/border'
 import TestMargin from '../routes/css/margin'
 import TestHeight from "../routes/css/height";
+import TestImage from '../routes/image'
 import "./BasicLayout.less";
 
 
@@ -198,6 +199,7 @@ class BasicLayout extends React.Component {
               <Route path="/border" exacrt component={TestBorder} />
               <Route path="/margin" exacrt component={TestMargin} />
               <Route path="/height" exacrt component={TestHeight} />
+              <Route path="/image" exacrt component={TestImage} />
               <Redirect to="/" />
             </Switch>
           </Content>
