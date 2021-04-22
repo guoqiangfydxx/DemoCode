@@ -56,6 +56,7 @@ import TestMargin from '../routes/css/margin'
 import TestHeight from "../routes/css/height";
 import TestImage from '../routes/image'
 import TestCopy from '../routes/copy'
+import TestPromise from '../routes/promise'
 import "./BasicLayout.less";
 
 
@@ -202,6 +203,7 @@ class BasicLayout extends React.Component {
               <Route path="/height" exacrt component={TestHeight} />
               <Route path="/image" exacrt component={TestImage} />
               <Route path="/copy" exacrt component={TestCopy} />
+              <Route path="/promise" exacrt component={TestPromise} />
               <Redirect to="/" />
             </Switch>
           </Content>
