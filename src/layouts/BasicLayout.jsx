@@ -57,6 +57,7 @@ import TestHeight from "../routes/css/height";
 import TestImage from '../routes/image'
 import TestCopy from '../routes/copy'
 import TestPromise from '../routes/promise'
+import TestButton from '../routes/button'
 import "./BasicLayout.less";
 
 
@@ -204,6 +205,7 @@ class BasicLayout extends React.Component {
               <Route path="/image" exacrt component={TestImage} />
               <Route path="/copy" exacrt component={TestCopy} />
               <Route path="/promise" exacrt component={TestPromise} />
+              <Route path="/button" exacrt component={TestButton} />
               <Redirect to="/" />
             </Switch>
           </Content>
