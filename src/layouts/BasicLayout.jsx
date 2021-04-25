@@ -58,6 +58,7 @@ import TestImage from '../routes/image'
 import TestCopy from '../routes/copy'
 import TestPromise from '../routes/promise'
 import TestButton from '../routes/button'
+import TestPreload from '../routes/preload'
 import "./BasicLayout.less";
 
 
@@ -206,6 +207,7 @@ class BasicLayout extends React.Component {
               <Route path="/copy" exacrt component={TestCopy} />
               <Route path="/promise" exacrt component={TestPromise} />
               <Route path="/button" exacrt component={TestButton} />
+              <Route path="/preload" exacrt component={TestPreload} />
               <Redirect to="/" />
             </Switch>
           </Content>
