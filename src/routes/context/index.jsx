@@ -26,6 +26,7 @@ function CompA(){
 
 function CompB() {
   const cnt = useContext(ValueCtx)
+  console.log('crtn>>>>>', cnt)
   return <div>组件 CompB Render 次数：{renderOnce("CompB")}</div>
 }
 

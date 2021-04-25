@@ -59,6 +59,7 @@ import TestCopy from '../routes/copy'
 import TestPromise from '../routes/promise'
 import TestButton from '../routes/button'
 import TestPreload from '../routes/preload'
+import TestClassContext from '../routes/context/classContext'
 import "./BasicLayout.less";
 
 
@@ -208,6 +209,7 @@ class BasicLayout extends React.Component {
               <Route path="/promise" exacrt component={TestPromise} />
               <Route path="/button" exacrt component={TestButton} />
               <Route path="/preload" exacrt component={TestPreload} />
+              <Route path="/classContext" exacrt component={TestClassContext} />
               <Redirect to="/" />
             </Switch>
           </Content>
