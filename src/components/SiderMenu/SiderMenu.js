@@ -668,6 +668,32 @@ export default class SiderMenu extends PureComponent {
               <Link to="/preload">preload</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub49"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>防抖</span>
+              </span>
+            }
+          >
+            <Menu.Item key="49">
+              <Link to="/debounce">防抖</Link>
+            </Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key="sub50"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>XSS</span>
+              </span>
+            }
+          >
+            <Menu.Item key="50">
+              <Link to="/xss">Xss</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );
