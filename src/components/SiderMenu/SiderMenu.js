@@ -674,7 +674,6 @@ export default class SiderMenu extends PureComponent {
               <span>
                 <Icon type="setting" />
                 <span>防抖</span>
-                <span>classContext</span>
               </span>
             }
           >
@@ -706,6 +705,18 @@ export default class SiderMenu extends PureComponent {
           >
             <Menu.Item key="51">
               <Link to="/diff">diff</Link>
+            </Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key="sub52"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>classContext</span>
+              </span>
+            }
+          >
+            <Menu.Item key="52">
               <Link to="/classContext">classContext</Link>
             </Menu.Item>
           </SubMenu>
