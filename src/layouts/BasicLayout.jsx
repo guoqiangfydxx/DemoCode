@@ -62,6 +62,7 @@ import TestPreload from '../routes/preload'
 import TestDebounce from '../routes/debounce'
 import TestXss from '../routes/xss'
 import TestDiff from '../routes/diff'
+import TestClassContext from '../routes/context/classContext'
 import "./BasicLayout.less";
 
 
@@ -214,6 +215,7 @@ class BasicLayout extends React.Component {
               <Route path="/debounce" exacrt component={TestDebounce} />
               <Route path="/xss" exacrt component={TestXss} />
               <Route path="/diff" exacrt component={TestDiff} />
+              <Route path="/classContext" exacrt component={TestClassContext} />
               <Redirect to="/" />
             </Switch>
           </Content>
