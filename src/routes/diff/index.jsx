@@ -1,6 +1,9 @@
 import React, { Fragment } from "react";
 import { Button, Divider } from "antd";
 import { node } from "prop-types";
+
+const Placement = 1
+const shouldTrackSideEffects = false
 class TestDiff extends React.Component {
   state = {
     list: [
