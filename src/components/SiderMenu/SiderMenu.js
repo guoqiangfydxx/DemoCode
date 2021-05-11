@@ -720,6 +720,19 @@ export default class SiderMenu extends PureComponent {
               <Link to="/classContext">classContext</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub53"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>funcdiff</span>
+              </span>
+            }
+          >
+            <Menu.Item key="53">
+              <Link to="/funcdiff">funcdiff</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );
