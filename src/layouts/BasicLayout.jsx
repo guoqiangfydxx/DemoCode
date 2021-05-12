@@ -65,6 +65,8 @@ import TestDiff from '../routes/diff'
 import TestClassContext from '../routes/context/classContext'
 import TestFuncDiff from '../routes/diff/funcDiff'
 import TestPortal from '../routes/portals'
+import FuncRef from '../routes/ref/funcRef'
+import ForwardRef from '../routes/ref/forward'
 import "./BasicLayout.less";
 
 
@@ -220,6 +222,8 @@ class BasicLayout extends React.Component {
               <Route path="/classContext" exacrt component={TestClassContext} />
               <Route path="/funcdiff" exacrt component={TestFuncDiff} />
               <Route path="/portals" exacrt component={TestPortal} />
+              <Route path="/funcref" exacrt component={FuncRef} />
+              <Route path="/forward" exacrt component={ForwardRef} />
               <Redirect to="/" />
             </Switch>
           </Content>
