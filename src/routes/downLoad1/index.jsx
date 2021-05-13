@@ -39,6 +39,7 @@ class Test extends React.Component {
         >
           测试3
         </a>
+        <div dangerouslySetInnerHTML={{ __html: `<a href='https://fileupload-testing-1257121556.cos.ap-shanghai.myqcloud.com/1231/19950e191b194bde8ff36b194d66e35d.xlsx'>企业信息-1</a>`}} />
       </div>
     );
   }
