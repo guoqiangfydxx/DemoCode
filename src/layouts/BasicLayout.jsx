@@ -262,7 +262,7 @@ class BasicLayout extends React.Component {
   }
 
   getPageTitle() {
-    return "template";
+    return "我的测试项目";
   }
 
   handleMenuCollapse = (collapsed) => {
