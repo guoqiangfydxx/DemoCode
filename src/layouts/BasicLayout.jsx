@@ -255,6 +255,8 @@ class BasicLayout extends React.Component {
       }
       return count;
     }
+    console.log('修改文件')
+    
   }
 
   componentWillUnmount() {
