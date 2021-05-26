@@ -160,8 +160,6 @@ class BasicLayout extends React.Component {
       return result;
     }
 
-    console.log("sss>>>>", lengthOfLongestSubstring("abcabdrfghjcbb"));
-
     function getNode(head, k) {
       let slow = head;
       let fast = head;
