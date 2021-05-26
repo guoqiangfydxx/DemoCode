@@ -127,7 +127,7 @@ class Logic extends React.Compeont {
   render() {
     return (
       <div className='logic'>
-        Logic
+      this is a algorithm page
       </div>
     )
   }
