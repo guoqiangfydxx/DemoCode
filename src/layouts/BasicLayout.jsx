@@ -67,6 +67,7 @@ import TestFuncDiff from "../routes/diff/funcDiff";
 import TestPortal from "../routes/portals";
 import FuncRef from "../routes/ref/funcRef";
 import ForwardRef from "../routes/ref/forward";
+import Logic from '../routes/logic'
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -370,6 +371,7 @@ class BasicLayout extends React.Component {
               <Route path="/portals" exacrt component={TestPortal} />
               <Route path="/funcref" exacrt component={FuncRef} />
               <Route path="/forward" exacrt component={ForwardRef} />
+              <Route path="/logic" exacrt component={Logic} />
               <Redirect to="/" />
             </Switch>
           </Content>
