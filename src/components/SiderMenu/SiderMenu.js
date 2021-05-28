@@ -195,7 +195,7 @@ export default class SiderMenu extends PureComponent {
             }
           >
             <Menu.Item key="11">
-              <Link to="/hook">reacr-Hooks</Link>
+              <Link to="/hook">react-Hooks</Link>
             </Menu.Item>
           </SubMenu>
           <SubMenu

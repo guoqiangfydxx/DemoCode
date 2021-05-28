@@ -71,7 +71,9 @@ import Logic from '../routes/logic'
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
-
+function ListNode() {
+  
+}
 const query = {
   "screen-xs": {
     maxWidth: 575,

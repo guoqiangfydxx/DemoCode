@@ -1,5 +1,5 @@
 import React from "react";
-class Logic extends React.Compeont {
+class Logic extends React.Component {
   state = {};
 
   componentDidMount() {
@@ -48,7 +48,7 @@ class Logic extends React.Compeont {
       return null;
     }
 
-    function getFirstCommonNode2(head1, head2) {
+    function getFirstCommonNode2(headA, headB) {
       let currA = headA,
         currB = headB;
       while (currA !== currB) {
@@ -150,11 +150,11 @@ class Logic extends React.Compeont {
 
     // 寻找数组中超过一半的数字
     // 数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字,你可以假设数组是非空的，并且给定的数组总是存在多数元素。
-    let arr = [2, 5, 5, 5, 8];
+    let arr1 = [2, 5, 5, 5, 8];
     function majorityElement(nums) {
       const map = new Map();
       for (const num of nums) {
-        map.set(num, map.get(num) ?? 0);
+        map.set(num, map.get(num) > 0 ?  map.get(num) : 0);
       }
       const middle = Math.floor(nums.length / 2);
       for (const [key, val] of map.entries()) {
@@ -182,7 +182,7 @@ class Logic extends React.Compeont {
     }
 
     // 输入一个整型数组，数组中的一个或连续多个整数组成一个子数组。求所有子数组的和的最大值。要求时间复杂度为O(n)。
-    nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+    let nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
     // 数组中有正数也有负数，所以加当前的数字，有可能会造成正影响，也有可能会造成负影响
     // 对于这种问题，一般情况下我们使用动态规划来解决这个问题，我们设置f(i)是以索引i结束的连续子数组的最大和，那么对于这个索引值i的数字来说，其如果为正数的话，那么f(i) = f(i-1) + nums[i], 如果其为负数的话，那么f(i) = f(i-1)
     // 而初始值的话f(0) = nums[0]
@@ -215,7 +215,7 @@ class Logic extends React.Compeont {
     function findFirstChar(s) {
       const map = new Map();
       for (const char of s) {
-        map.set(char, (map.get(char) ?? 0) + 1);
+        map.set(char, map.get(char) > 0 ?  map.get(char) + 1 : 1);
       }
       for (const [key, val] of map) {
         if (val === 1) {
