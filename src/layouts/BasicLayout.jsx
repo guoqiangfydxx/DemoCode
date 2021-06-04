@@ -122,6 +122,61 @@ class BasicLayout extends React.Component {
       });
     });
 
+    (function () {
+      // canvas 实现 watermark
+      function __canvasWM({
+        // 使用 ES6 的函数默认值方式设置参数的默认取值
+        // 具体参见 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters
+        container = document.body,
+        width = '200px',
+        height = '150px',
+        textAlign = 'center',
+        textBaseline = 'middle',
+        font = "20px microsoft yahei",
+        fillStyle = 'rgba(184, 184, 184, 0.8)',
+        content = '请勿外传',
+        rotate = '30',
+        zIndex = 1000
+      } = {}) {
+        var args = arguments[0];
+        var canvas = document.createElement('canvas');
+ 
+        canvas.setAttribute('width', width);
+        canvas.setAttribute('height', height);
+        var ctx = canvas.getContext("2d");
+ 
+        ctx.textAlign = textAlign;
+        ctx.textBaseline = textBaseline;
+        ctx.font = font;
+        ctx.fillStyle = fillStyle;
+        ctx.rotate(Math.PI / 180 * rotate);
+        ctx.fillText(content, parseFloat(width) / 2, parseFloat(height) / 2);
+ 
+        var base64Url = canvas.toDataURL();
+        const watermarkDiv = document.createElement("div");
+        watermarkDiv.setAttribute('style', `
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
+          z-index:${zIndex};
+          pointer-events:none;
+          background-repeat:repeat;
+          background-image:url('${base64Url}')`);
+ 
+        container.style.position = 'relative';
+        container.insertBefore(watermarkDiv, container.firstChild);
+      }
+ 
+      window.__canvasWM = __canvasWM;
+    })();
+ 
+    // 调用
+    window.__canvasWM({
+      content: 'QQMusicFE'
+    })
+
     console.log("BasicLayout>>>>", this.isReactComponent);
     // 请从字符串中找出最长的不包含重复字符的子串，然后返回其长度
     // 解决这道题的思路居然是使用动态规划来解决这个问题，我们设置dp[j]表示以字符串s[j]为结尾的字符串中的最长的不重复的子字符串的长度，我们设定i是在j前面离j最近的相同位置的字符；这样的话如果说i < 0的话，那么说明左边没有相同的字符, dp[j] = dp[j - 1] + 1; 如果说dp[j - 1] < j - i的话，那么说明字符串s[i]是在dp[j-1]区间之外的,此时dp[j] = dp[j-1] + 1;如果说dp[j-1] > j-i的话，那么字符串s[i]就在区间dp[j-1]中，此时dp[j] = j - i,
