@@ -612,6 +612,43 @@ class Logic extends React.Component {
       }
       return maxStr;
     }
+
+    // 判断一个字符串是否为另外一个字符串的子串，需要保持原有的字符串顺序不变
+    function isSubStr(str1, str2) {
+      let index = 0
+      for (let i = 0, len = str2.length; i < len; i++) {
+        if (str2[i] === str1[index]) {
+          index++
+        }
+      }
+      return index === str1.length
+    }
+
+    // 给定一个有序数组，寻找某一个元素的左右位置
+    function findPosition(nums, target) {
+      let left = 0
+      let right = nums.length - 1
+      while (left < right) {
+        const mid = Math.floor((left + right) / 2)
+        if (nums[mid] > target) {
+          right = mid - 1
+        } else if (nums[mid] < target) {
+          left = mid + 1
+        } else {
+          left = mid;
+          break
+        }
+      }
+      let prev = left
+      let next = left + 1
+      while (prev >= 0 && nums[left] === target) {
+        prev--
+      }
+      while (next < nums.length && nums[next] === target) {
+        next++
+      }
+      return [left + 1, next - 1]
+    }
   }
 
   render() {
