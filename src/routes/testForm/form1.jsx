@@ -43,6 +43,7 @@ class Form1 extends React.Component {
 
   render() {
     const { getFieldDecorator } = this.props.form;
+    console.log('render')
     return (
       <Fragment>
         <Form className="form-body">
