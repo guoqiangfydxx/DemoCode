@@ -68,6 +68,7 @@ import TestPortal from "../routes/portals";
 import FuncRef from "../routes/ref/funcRef";
 import ForwardRef from "../routes/ref/forward";
 import Logic from '../routes/logic'
+import ParentAndChild from '../routes/render1/parent2'
 import "./BasicLayout.less";
 
 const { Header, Content, Footer } = Layout;
@@ -427,6 +428,7 @@ class BasicLayout extends React.Component {
               <Route path="/funcref" exacrt component={FuncRef} />
               <Route path="/forward" exacrt component={ForwardRef} />
               <Route path="/logic" exacrt component={Logic} />
+              <Route path="/parent2" exacrt component={ParentAndChild} />
               <Redirect to="/" />
             </Switch>
           </Content>
