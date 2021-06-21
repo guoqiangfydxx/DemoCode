@@ -798,6 +798,19 @@ export default class SiderMenu extends PureComponent {
               <Link to="/parent2">父子生命周期</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub59"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>非受控组件的defaultValue</span>
+              </span>
+            }
+          >
+            <Menu.Item key="59">
+              <Link to="/unControlDefaultValue">非受控组件的defaultValue</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );
