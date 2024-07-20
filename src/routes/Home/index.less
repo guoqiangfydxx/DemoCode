@@ -1,0 +1,25 @@
+.text {
+    overflow: hidden;
+    // padding-left: 100%;
+            animation: marquee 10s linear infinite;
+            color:aqua;
+            display: inline-block;
+            white-space: nowrap;
+}
+.container {
+    width: 200px;
+    height:200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid red;
+    overflow: hidden;
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
